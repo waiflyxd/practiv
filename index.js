@@ -3,7 +3,7 @@
 let elem = document.querySelector('#elem');
 elem.addEventListener('blur', func() );
 function func(e) {
-	alert(square(elem.value) );
+	console.log(square(elem.value) );
 	function square(value) {
 		return value * value;
 	}
@@ -38,7 +38,7 @@ function func5(name, surname) {
     console.log(this.value + ', ' + name + ' ' + surname);
 }
 
-let boundFunc6 = func5.bind(elem6);
+let boundFunc5 = func5.bind(elem5);
 boundFunc5('John', 'Smit');
 boundFunc5('Eric', 'Luis');
 
@@ -95,12 +95,12 @@ document.getElementById('startButton').addEventListener('click', () => {
 //11
 let input11 = document.getElementById('inputNumber');
 let timer11 = setInterval(() => {
-    let value11 = parseInt(input.value);
+    let value11 = parseInt(input11.value);
     if (value11 <= 0) {
         clearInterval(timer11);
     } else {
         value11--;
-        input11.value = value;
+        input11.value = value11;
     }
 }, 1000);
 
@@ -161,7 +161,7 @@ ul.insertAdjacentHTML('beforeend', '<li>finish</li>');
 let newLi = document.createElement('li');
 newLi.textContent = 'new';
 let elem19 = document.getElementById('elem19');
-elem.parentNode.insertBefore(newLi, elem19);
+elem19.parentNode.insertBefore(newLi, elem19);
 
 //20
 let newParagraph = document.createElement('p');
